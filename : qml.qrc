@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>html/googleMaps.html</file>
+        <file>html/qwebchannel.js</file>
+        <file>icons/Hamburger.png</file>
+        <file>MapSearchDelegate.qml</file>
+        <file>SearchToolButton.qml</file>
+        <file>icons/closeDialogButton.png</file>
+        <file>icons/searchGoTo.png</file>
+    </qresource>
+</RCC>
