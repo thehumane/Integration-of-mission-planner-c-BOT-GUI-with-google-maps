@@ -16,3 +16,9 @@ In addition to providing user interaction with map overlay objects and the displ
 
 The industry standard for consumer mapping is Google Maps. Since there are no C++ APIs for Google Maps, this presents a problem for Qt developers. Here comes Qt's WebEngineView, which offers a QML-based embedded web browser window powered by Chromium. A Google Map may be smoothly included in a QML application using WebEngineView. Google's services, including those for navigation, search, and information, are included with Google Maps
 
+# Motivation and Solution
+
+There are various native ways to integrate maps into a Qt application, including the Location module and map plugin system. The following map plugins are available and shipped with Qt: Mapbox, Open Street Maps, Here, and ESRI. One may argue that these plugins are better because they are all written in C++, have a shared Qt/QML API, and provide map caching. Additionally, Qt map plugins consume fewer system resources than the WebEngineView method employed here to display a Google map. However, certain applications require Google Maps due to factors like quality, features, or cache value.
+
+Basically, it works best to load an external HTML file containing the javascript code required to load the map into QWebView. By using this technique, you may create JavaScript methods that can manage the map (markers, etc.) inside an HTML file, which you can then quickly call from Qt code.
+
